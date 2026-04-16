@@ -1,0 +1,42 @@
+# ============================================================
+# Configuration Netlify pour Qonixs — Next.js 14 App Router
+# ============================================================
+
+[build]
+  # Commande de build Next.js
+  command = "npm run build"
+  # Répertoire de sortie Next.js
+  publish = ".next"
+
+# Plugin officiel Netlify pour Next.js (gère SSR, routes dynamiques, etc.)
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# ---------------------------------------------------------------
+# Headers de sécurité pour toutes les pages
+# ---------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# ---------------------------------------------------------------
+# Cache des assets statiques (images, fonts, JS, CSS)
+# ---------------------------------------------------------------
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/products/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
