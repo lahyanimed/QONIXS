@@ -14,7 +14,7 @@ const services = [
   {
     title: "Wi-Fi Hospitality",
     desc: "Solutions Wi-Fi rapides et fiables conçues pour les hôtels, riads et résidences. Portail captif, gestion des invités, couverture totale.",
-    photo: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&fit=crop&q=80",
+    photo: "/assets/images/services/service-wifi.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M5 12.55a11 11 0 0114 0" /><path d="M1.42 9a16 16 0 0121.16 0" />
@@ -25,7 +25,7 @@ const services = [
   {
     title: "Internet Collectif",
     desc: "Connectivité partagée stable et performante pour résidences Deluxe, cités étudiantes et ensembles résidentiels.",
-    photo: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&fit=crop&q=80",
+    photo: "/assets/images/services/service-collectif.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
@@ -36,7 +36,7 @@ const services = [
   {
     title: "Vidéosurveillance IP",
     desc: "Caméras haute définition, enregistreurs NVR, vision nocturne et accès à distance pour une sécurité avancée 24/7.",
-    photo: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600&fit=crop&q=80",
+    photo: "/assets/images/services/service-camera.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M23 7l-7 5 7 5V7z" /><rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
@@ -46,7 +46,7 @@ const services = [
   {
     title: "Internet par Satellite",
     desc: "Couverture haut débit partout au Maroc, y compris en zones isolées ou rurales. Installation clé en main et équipement fourni.",
-    photo: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600&fit=crop&q=80",
+    photo: "/assets/images/services/service-satellite.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 10c0-3.31 2.69-6 6-6" /><path d="M4 14a10 10 0 0010 10" />
@@ -57,7 +57,7 @@ const services = [
   {
     title: "Infrastructure Réseau",
     desc: "Conception, câblage et déploiement d'infrastructures robustes : LAN, VLAN, fibre, switches manageables, architecture d'entreprise.",
-    photo: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&fit=crop&q=80",
+    photo: "/assets/images/services/service-network.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="20" height="7" rx="1" /><rect x="2" y="14" width="20" height="7" rx="1" />
@@ -68,7 +68,7 @@ const services = [
   {
     title: "Installation & Maintenance",
     desc: "Service professionnel sur site, diagnostics préventifs, interventions rapides et contrats de maintenance sur mesure.",
-    photo: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&fit=crop&q=80",
+    photo: "/assets/images/services/service-maintenance.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />

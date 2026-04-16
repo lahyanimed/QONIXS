@@ -120,15 +120,15 @@ export default function TarifsSatellitePage() {
       <section className="max-w-7xl mx-auto px-4 pt-12 pb-0">
         <div className="grid grid-cols-3 gap-3 h-48 rounded-2xl overflow-hidden">
           <div className="relative col-span-1 overflow-hidden rounded-xl">
-            <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=500&fit=crop&q=80" alt="Antenne satellite" className="w-full h-full object-cover" />
+            <img src="/assets/images/services/service-satellite.jpg" alt="Antenne satellite" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-dark/20"/>
           </div>
           <div className="relative col-span-1 overflow-hidden rounded-xl">
-            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&fit=crop&q=80" alt="Infrastructure réseau" className="w-full h-full object-cover" />
+            <img src="/assets/images/services/service-network.jpg" alt="Infrastructure réseau" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-dark/20"/>
           </div>
           <div className="relative col-span-1 overflow-hidden rounded-xl">
-            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=500&fit=crop&q=80" alt="Support technique" className="w-full h-full object-cover" />
+            <img src="/assets/images/services/service-maintenance.jpg" alt="Support technique" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-dark/20"/>
           </div>
         </div>
