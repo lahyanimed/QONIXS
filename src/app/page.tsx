@@ -94,9 +94,9 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {[
-            { label: "Wi-Fi & Connectivité", sub: "Hotels, résidences, entreprises", img: "https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=700&fit=crop", href: "/services" },
-            { label: "Infrastructure Réseau", sub: "Déploiement & maintenance", img: "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=700&fit=crop", href: "/services" },
-            { label: "Internet par Satellite", sub: "Couverture partout au Maroc", img: "https://images.pexels.com/photos/586063/pexels-photo-586063.jpeg?auto=compress&cs=tinysrgb&w=700&fit=crop", href: "/tarifs-satellite" },
+            { label: "Wi-Fi & Connectivité", sub: "Hotels, résidences, entreprises", img: "/assets/images/services/service-wifi.jpg", href: "/services" },
+            { label: "Infrastructure Réseau", sub: "Déploiement & maintenance", img: "/assets/images/services/service-network.jpg", href: "/services" },
+            { label: "Internet par Satellite", sub: "Couverture partout au Maroc", img: "/assets/images/services/service-satellite.jpg", href: "/tarifs-satellite" },
           ].map((item) => (
             <a key={item.label} href={item.href} className="group relative h-48 rounded-2xl overflow-hidden block">
               {/* eslint-disable-next-line @next/next/no-img-element */}

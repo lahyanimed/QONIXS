@@ -18,7 +18,7 @@ const slides = [
     desc: "Couverture totale, portail captif et gestion des invités.",
     cta: "Découvrir",
     href: "/services",
-    img: "https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=1920&h=700&fit=crop",
+    img: "/assets/images/hero/hero-wifi.jpg",
     accent: "#0ea5e9",
   },
   {
@@ -28,7 +28,7 @@ const slides = [
     desc: "Couverture satellite même dans les zones les plus reculées.",
     cta: "Voir les tarifs",
     href: "/tarifs-satellite",
-    img: "https://images.pexels.com/photos/586063/pexels-photo-586063.jpeg?auto=compress&cs=tinysrgb&w=1920&h=700&fit=crop",
+    img: "/assets/images/hero/hero-satellite.jpg",
     accent: "#0ea5e9",
   },
   {
@@ -38,7 +38,7 @@ const slides = [
     desc: "Caméras HD, vision nocturne et accès à distance.",
     cta: "Nos services",
     href: "/services",
-    img: "https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1920&h=700&fit=crop",
+    img: "/assets/images/hero/hero-camera.jpg",
     accent: "#0ea5e9",
   },
   {
@@ -48,7 +48,7 @@ const slides = [
     desc: "LAN, VLAN, fibre optique et switches manageables.",
     cta: "En savoir plus",
     href: "/services",
-    img: "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1920&h=700&fit=crop",
+    img: "/assets/images/hero/hero-network.jpg",
     accent: "#0ea5e9",
   },
   {
@@ -58,7 +58,7 @@ const slides = [
     desc: "Solutions stables pour résidences Deluxe et cités étudiantes.",
     cta: "Nos solutions",
     href: "/services",
-    img: "https://images.pexels.com/photos/1486785/pexels-photo-1486785.jpeg?auto=compress&cs=tinysrgb&w=1920&h=700&fit=crop",
+    img: "/assets/images/hero/hero-campus.jpg",
     accent: "#0ea5e9",
   },
 ];
