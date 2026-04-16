@@ -1,11 +1,29 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Qonixs — Solutions Internet & Réseau au Maroc | SettaTech",
+  description:
+    "Qonixs by SettaTech : routeurs WiFi 6, internet par satellite, Wi-Fi hôtels & résidences, vidéosurveillance IP et infrastructure réseau au Maroc. Livraison express Settat, Casablanca, Rabat, Marrakech.",
+  keywords: [
+    "internet par satellite Maroc", "Wi-Fi hôtel Maroc", "Wi-Fi résidence Maroc",
+    "Qonixs", "SettaTech", "routeur WiFi 6 Maroc", "caméra IP Maroc",
+    "Wi-Fi collectif Maroc", "équipements réseau Maroc",
+  ],
+  alternates: { canonical: "https://qonixs.com" },
+  openGraph: {
+    title: "Qonixs — Solutions Internet & Réseau au Maroc",
+    description: "Qonixs by SettaTech : Wi-Fi, satellite, surveillance et réseau pour hôtels, résidences et entreprises au Maroc.",
+    url: "https://qonixs.com",
+    images: [{ url: "/assets/images/hero/hero-wifi.jpg", width: 1920, height: 700, alt: "Qonixs Solutions Internet Maroc" }],
+  },
+};
 import { products, categories } from "@/lib/products";
 import ProductGrid from "@/components/products/ProductGrid";
 import CategoryCard from "@/components/ui/CategoryCard";
 import PromoBanner from "@/components/ui/PromoBanner";
 import HeroCarousel from "@/components/home/HeroCarousel";
+import BrandSection from "@/components/home/BrandSection";
 import ProductCarousel from "@/components/home/ProductCarousel";
 
 const trustItems = [
@@ -165,6 +183,93 @@ export default function HomePage() {
             products={switches}
             viewAllHref="/categorie/switches"
           />
+        </div>
+      </section>
+
+      {/* ===== SECTION MARQUES PARTENAIRES ===== */}
+      <BrandSection />
+
+      {/* Bannière produit — WiFi 7 Archer BE220 */}
+      <section className="max-w-7xl mx-auto px-4 pb-12">
+        <div
+          className="relative rounded-2xl overflow-hidden"
+          style={{ background: "#0d1f35" }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center min-h-[220px]">
+            {/* Texte */}
+            <div className="p-8 lg:p-10 relative z-10">
+              <span className="inline-block px-3 py-1 bg-primary/20 border border-primary/30 rounded-full text-primary text-xs font-dm font-bold uppercase tracking-wider mb-4">
+                Nouvelle génération
+              </span>
+              <h3 className="font-syne font-bold text-white mb-2" style={{ fontSize: "clamp(1.4rem, 2.5vw, 2rem)" }}>
+                À la découverte du <span className="text-primary">WiFi 7</span>
+              </h3>
+              <p className="font-dm text-gray-300 text-sm mb-2">Archer BE220 — Routeur WiFi 7 BE3600 bi-bande</p>
+              <p className="font-dm text-gray-400 text-xs mb-6 max-w-sm">
+                Jusqu'à 3,6 Gbit/s, latence ultra-faible, compatible EasyMesh. La nouvelle ère du Wi-Fi pour votre maison ou bureau au Maroc.
+              </p>
+              <div className="flex gap-3">
+                <a
+                  href="/produit/archer-be220"
+                  className="px-5 py-2.5 bg-primary text-white rounded-xl font-dm font-medium text-sm hover:bg-sky-400 transition-colors"
+                >
+                  Découvrir l'Archer BE220
+                </a>
+              </div>
+            </div>
+            {/* Image produit — mix-blend-mode:multiply supprime le fond blanc */}
+            <div className="flex items-center justify-center p-6">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/assets/images/products/archer-be220.jpg"
+                alt="TP-Link Archer BE220 WiFi 7 BE3600 — Maroc Qonixs"
+                className="max-h-44 object-contain"
+                style={{ mixBlendMode: "multiply" }}
+              />
+            </div>
+          </div>
+          {/* Cercles décoratifs */}
+          <div className="absolute -bottom-10 -left-10 w-48 h-48 rounded-full border border-primary/10 pointer-events-none" />
+          <div className="absolute -top-10 right-1/3 w-32 h-32 rounded-full border border-primary/5 pointer-events-none" />
+        </div>
+      </section>
+
+      {/* Bannière produit — Ruijie extérieur tout-terrain */}
+      <section className="max-w-7xl mx-auto px-4 pb-12">
+        <div
+          className="relative rounded-2xl overflow-hidden"
+          style={{ background: "#0d2244" }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center min-h-[220px]">
+            {/* Image produit */}
+            <div className="flex items-center justify-center p-8 order-2 md:order-1">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/products/RG-RAP6262(G).png"
+                alt="Ruijie RG-RAP6262G point d'accès extérieur IP68 WiFi 6 Maroc — résiste aux environnements difficiles"
+                className="max-h-44 object-contain drop-shadow-2xl"
+              />
+            </div>
+            {/* Texte */}
+            <div className="p-8 lg:p-10 relative z-10 order-1 md:order-2">
+              <span className="inline-block px-3 py-1 bg-sky-500/20 border border-sky-400/30 rounded-full text-sky-300 text-xs font-dm font-bold uppercase tracking-wider mb-4">
+                Ruijie Reyee — IP68
+              </span>
+              <h3 className="font-syne font-bold text-white mb-2" style={{ fontSize: "clamp(1.3rem, 2.2vw, 1.8rem)" }}>
+                <span className="text-sky-400">Toujours stable</span> — même en extérieur
+              </h3>
+              <p className="font-dm text-sky-200/70 text-sm mb-2">RG-RAP6262(G) — WiFi 6 AX1800 Extérieur IP68</p>
+              <p className="font-dm text-sky-200/50 text-xs mb-6 max-w-sm">
+                Ne craint pas les environnements difficiles. Résistant à la pluie, la poussière et la chaleur. Idéal pour hôtels, résidences et espaces extérieurs au Maroc.
+              </p>
+              <a
+                href="/produit/rg-rap6262g"
+                className="inline-block px-5 py-2.5 bg-sky-500 text-white rounded-xl font-dm font-medium text-sm hover:bg-sky-400 transition-colors"
+              >
+                Voir le RG-RAP6262(G)
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

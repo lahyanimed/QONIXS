@@ -19,8 +19,9 @@ export default function Footer() {
                 qoni<span className="text-primary">xs</span>
               </span>
             </div>
+            <p className="text-xs font-dm text-primary/80 mb-1 uppercase tracking-wider">Un service de SettaTech</p>
             <p className="text-sm text-gray-400 mb-4 font-dm leading-relaxed">
-              Votre boutique spécialisée en équipements réseau au Maroc. Routeurs, Mesh WiFi, Switches, Caméras IP et accessoires.
+              Solutions internet par satellite, Wi-Fi collectif, vidéosurveillance IP et équipements réseau au Maroc — Settat, Casablanca, Rabat, Marrakech.
             </p>
             {/* Social */}
             <div className="flex gap-3">
@@ -71,14 +72,14 @@ export default function Footer() {
             <h3 className="font-syne font-bold text-sm mb-4 uppercase tracking-wider">Services</h3>
             <ul className="space-y-2 font-dm text-sm text-gray-400">
               {[
-                "Livraison & Retours",
-                "Garantie Officielle",
-                "Support Technique",
-                "Programme Fidélité",
-                "Devenir Revendeur",
-              ].map((label) => (
+                { href: "/services", label: "Wi-Fi Hospitality" },
+                { href: "/tarifs-satellite", label: "Internet Satellite" },
+                { href: "/services", label: "Vidéosurveillance IP" },
+                { href: "/services", label: "Infrastructure Réseau" },
+                { href: "/a-propos", label: "À propos — SettaTech" },
+              ].map(({ href, label }) => (
                 <li key={label}>
-                  <a href="#" className="hover:text-white transition-colors">{label}</a>
+                  <a href={href} className="hover:text-white transition-colors">{label}</a>
                 </li>
               ))}
             </ul>
@@ -123,7 +124,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-500 font-dm">
-            © 2024 Qonixs. Tous droits réservés.
+            © 2025 <span className="text-gray-400">SettaTech</span> — Qonixs. Tous droits réservés. Settat, Maroc.
           </p>
           {/* Payment icons */}
           <div className="flex items-center gap-3">

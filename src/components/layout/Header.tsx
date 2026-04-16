@@ -15,6 +15,7 @@ const navLinks = [
   { href: "/categorie/cameras", label: "Caméras IP" },
   { href: "/services", label: "Services" },
   { href: "/tarifs-satellite", label: "Satellite" },
+  { href: "/a-propos", label: "À propos" },
 ];
 
 function Logo() {
