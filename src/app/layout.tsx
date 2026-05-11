@@ -97,14 +97,14 @@ export const metadata: Metadata = {
     creator: "@qonixsma",
   },
   verification: {
-    google: "VOTRE_CODE_GOOGLE_SEARCH_CONSOLE",
+    google: "b-Hp5NwGr9Rq4zDWelwnwJbHcWS1dXMpYe-ibH38zxY",
   },
 };
 
 // JSON-LD Structured Data — Organisation + LocalBusiness
 const jsonLd = {
   "@context": "https://schema.org",
-  "@graph": [
+  "@graph": [h
     {
       "@type": "Organization",
       "@id": `${BASE_URL}/#organization`,
