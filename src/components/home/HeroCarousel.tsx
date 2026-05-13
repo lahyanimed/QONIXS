@@ -2,8 +2,8 @@
 
 /**
  * HeroCarousel — Carrousel plein écran dans la section Hero
- * 5 slides : Wi-Fi, Satellite, Surveillance, Infrastructure, Internet Collectif
- * Images Pexels (libres, fiables en production)
+ * 5 slides contexte marocain : hôtels, résidences, complexes touristiques
+ * Images locales optimisées (public/assets/images/hero/)
  */
 
 import { useState, useEffect, useCallback } from "react";
@@ -13,53 +13,58 @@ import { motion, AnimatePresence } from "framer-motion";
 const slides = [
   {
     id: 1,
-    label: "Wi-Fi Hospitality",
-    title: "Wi-Fi professionnel\npour hôtels & résidences",
-    desc: "Couverture totale, portail captif et gestion des invités.",
-    cta: "Découvrir",
+    label: "Wi-Fi Hospitality — Maroc",
+    badge: "Hôtels & Résidences",
+    title: "Wi-Fi haut débit\npour hôtels & résidences",
+    desc: "Portail captif, gestion des invités et couverture totale pour complexes touristiques marocains.",
+    cta: "Nos solutions Wi-Fi",
     href: "/services",
-    img: "/assets/images/hero/hero-wifi.jpg",
-    accent: "#0ea5e9",
+    img: "/assets/images/hero/hero-maroc-hotel.jpg",
+    alt: "Wi-Fi professionnel pour hôtels et résidences au Maroc — Qonixs SettaTech Settat",
   },
   {
     id: 2,
-    label: "Internet par Satellite",
-    title: "Haut débit partout\nau Maroc",
-    desc: "Couverture satellite même dans les zones les plus reculées.",
-    cta: "Voir les tarifs",
-    href: "/tarifs-satellite",
-    img: "/assets/images/hero/hero-satellite.jpg",
-    accent: "#0ea5e9",
+    label: "Résidences Modernes",
+    badge: "Wi-Fi Résidentiel",
+    title: "Connectivité pour\nrésidences marocaines",
+    desc: "Solutions Wi-Fi fiables pour résidences Deluxe, cités étudiantes et complexes résidentiels au Maroc.",
+    cta: "Voir les services",
+    href: "/services",
+    img: "/assets/images/hero/hero-maroc-residence.jpg",
+    alt: "Wi-Fi collectif résidences modernes au Maroc — solutions connectivité Qonixs SettaTech",
   },
   {
     id: 3,
-    label: "Vidéosurveillance IP",
-    title: "Sécurisez vos\nlocaux 24h/7j",
-    desc: "Caméras HD, vision nocturne et accès à distance.",
-    cta: "Nos services",
-    href: "/services",
-    img: "/assets/images/hero/hero-camera.jpg",
-    accent: "#0ea5e9",
+    label: "Internet par Satellite",
+    badge: "Couverture Nationale",
+    title: "Haut débit partout\nau Maroc",
+    desc: "Internet satellite pour zones rurales, montagneuses et isolées. Couverture partout au Maroc.",
+    cta: "Voir les tarifs",
+    href: "/tarifs-satellite",
+    img: "/assets/images/hero/hero-satellite.jpg",
+    alt: "Internet par satellite au Maroc — couverture zones rurales — Qonixs SettaTech",
   },
   {
     id: 4,
-    label: "Infrastructure Réseau",
-    title: "Conception &\ndéploiement réseau",
-    desc: "LAN, VLAN, fibre optique et switches manageables.",
-    cta: "En savoir plus",
+    label: "Complexes Touristiques",
+    badge: "Hospitality Tech",
+    title: "Solutions réseau\npour complexes & resorts",
+    desc: "Infrastructure Wi-Fi, vidéosurveillance et connectivité clé en main pour complexes touristiques marocains.",
+    cta: "Demander un devis",
     href: "/services",
-    img: "/assets/images/hero/hero-network.jpg",
-    accent: "#0ea5e9",
+    img: "/assets/images/hero/hero-maroc-resort.jpg",
+    alt: "Solutions réseau pour complexes touristiques et resorts au Maroc — Qonixs SettaTech",
   },
   {
     id: 5,
-    label: "Internet Collectif",
-    title: "Connectivité pour\nrésidences & campus",
-    desc: "Solutions stables pour résidences Deluxe et cités étudiantes.",
-    cta: "Nos solutions",
+    label: "Infrastructure Entreprise",
+    badge: "Réseaux Professionnels",
+    title: "Déploiement réseau\npour entreprises marocaines",
+    desc: "LAN, VLAN, fibre optique, switches manageables et Wi-Fi 6 pour bureaux et immeubles d'affaires.",
+    cta: "En savoir plus",
     href: "/services",
-    img: "/assets/images/hero/hero-campus.jpg",
-    accent: "#0ea5e9",
+    img: "/assets/images/hero/hero-maroc-tower.jpg",
+    alt: "Infrastructure réseau entreprises immeubles d'affaires au Maroc — Qonixs SettaTech",
   },
 ];
 
@@ -99,7 +104,7 @@ export default function HeroCarousel() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={slide.img}
-            alt={slide.label}
+            alt={slide.alt}
             className="w-full h-full object-cover"
           />
           {/* Dégradé sombre */}
@@ -117,9 +122,18 @@ export default function HeroCarousel() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
+            {/* Branding SettaTech */}
+            <div className="flex items-center gap-2 mb-4">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[10px] font-dm font-bold text-white/60 uppercase tracking-widest">
+                SettaTech
+                <span className="text-white/30">•</span>
+                Qonixs
+              </span>
+            </div>
+
             {/* Badge service */}
             <span className="inline-block px-3 py-1 text-xs font-dm text-primary bg-primary/20 rounded-full mb-4 border border-primary/30">
-              {slide.label}
+              {slide.badge}
             </span>
 
             {/* Titre */}
@@ -143,7 +157,7 @@ export default function HeroCarousel() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href={slide.href}
-                className="px-6 py-3 bg-primary text-white font-dm font-medium rounded-xl hover:bg-primary-dark transition-colors text-sm"
+                className="px-6 py-3 bg-primary text-white font-dm font-medium rounded-xl hover:bg-sky-600 transition-colors text-sm"
               >
                 {slide.cta}
               </Link>

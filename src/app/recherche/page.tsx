@@ -23,7 +23,7 @@ function SearchResults() {
     return results;
   }, [allResults, priceRange, selectedBrands]);
 
-  const availableBrands = [...new Set(allResults.map((p) => p.brand))];
+  const availableBrands = Array.from(new Set(allResults.map((p) => p.brand)));
 
   const toggleBrand = (brand: string) => {
     setSelectedBrands((prev) =>

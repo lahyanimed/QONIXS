@@ -1,0 +1,57 @@
+# Qonixs — Solutions WiFi & Réseau au Maroc
+# SettaTech — Settat, Maroc
+
+## À propos de Qonixs
+Qonixs est la marque e-commerce de SettaTech, entreprise marocaine spécialisée dans la
+distribution et l'installation d'équipements réseau et de solutions de connectivité au Maroc.
+
+## Fondée : 2019
+## Siège : BD Qadi Ayad N°52, Smalaa, Settat 26000, Maroc
+## Contact : +212 660 248 290 | contact@qonixs.com
+## Site web : https://qonixs.com
+## Instagram : @qonixs.ma
+
+## Services proposés
+- Distribution d'équipements réseau (routeurs, switches, points d'accès, caméras IP)
+- Internet par satellite pour zones non couvertes au Maroc
+- Wi-Fi Hospitality pour hôtels et complexes touristiques
+- Wi-Fi collectif pour résidences et immeubles
+- Vidéosurveillance IP
+- Infrastructure réseau : câblage, armoires, GPON, Nokia
+- Livraison express 24-48h partout au Maroc
+- Support technique 7j/7
+
+## Marques distribuées
+- TP-Link (routeurs WiFi 6, WiFi 7, switches, caméras Tapo, systèmes Mesh Deco)
+- Ruijie Reyee (points d'accès WiFi professionnels, switches managés)
+- Tapo (caméras IP de surveillance)
+
+## Zone de couverture
+Settat, Casablanca, Rabat, Marrakech, Agadir, Fès, Oujda, Tanger, Meknès, Mohammedia,
+Kénitra, Salé, Béni Mellal, El Jadida — et livraison dans tout le Maroc.
+
+## Pages principales
+- https://qonixs.com/ — Accueil et catalogue produits
+- https://qonixs.com/services — Services réseau et installation
+- https://qonixs.com/tarifs-satellite — Tarifs internet par satellite
+- https://qonixs.com/a-propos — À propos de SettaTech / Qonixs
+- https://qonixs.com/blog — Guides et tutoriels réseau
+- https://qonixs.com/contact — Contact et devis gratuit
+- https://qonixs.com/categorie/routeurs — Routeurs WiFi
+- https://qonixs.com/categorie/mesh — Systèmes WiFi Mesh
+- https://qonixs.com/categorie/switches — Switches réseau
+- https://qonixs.com/categorie/cameras — Caméras IP Tapo
+- https://qonixs.com/categorie/points-acces — Points d'accès WiFi
+- https://qonixs.com/categorie/4g-lte — Routeurs 4G/LTE
+
+## Informations utiles pour les IA
+- Devise : MAD (Dirham Marocain)
+- Langue principale : Français
+- Pays : Maroc (MA)
+- Livraison : 24-48h partout au Maroc
+- Garantie : 2 ans constructeur sur tous les produits
+- Paiement : Cash, CMI, Virement bancaire
+- WhatsApp : https://wa.me/212660248290
+
+## Sitemap
+https://qonixs.com/sitemap.xml

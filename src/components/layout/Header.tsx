@@ -9,12 +9,15 @@ import { useCartStore } from "@/store/cartStore";
 const navLinks = [
   { href: "/", label: "Accueil" },
   { href: "/categorie/routeurs", label: "Routeurs" },
-  { href: "/categorie/access-points", label: "Points d'accès" },
+  { href: "/categorie/points-acces", label: "Points d'accès" },
   { href: "/categorie/mesh", label: "WiFi Mesh" },
   { href: "/categorie/switches", label: "Switches" },
   { href: "/categorie/cameras", label: "Caméras IP" },
   { href: "/services", label: "Services" },
   { href: "/tarifs-satellite", label: "Satellite" },
+  { href: "/blog", label: "Blog" },
+  { href: "/a-propos", label: "À propos" },
+  { href: "/contact", label: "Contact" },
 ];
 
 function Logo() {

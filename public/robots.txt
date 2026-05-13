@@ -1,0 +1,48 @@
+# Robots.txt — qonixs.com
+# SettaTech Qonixs — Solutions WiFi & Réseau au Maroc
+# Mise à jour : 2026-05-12
+
+# ─── Règles générales ───────────────────────────────────────────────
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /panier
+Disallow: /commander
+Disallow: /compte/
+Disallow: /mon-compte/
+Disallow: /api/
+Disallow: /search?
+Disallow: /tag/
+Disallow: /*.pdf$
+Disallow: /print/
+
+# ─── Crawlers agressifs — ralentissement ────────────────────────────
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 30
+
+User-agent: DotBot
+Crawl-delay: 30
+
+# ─── Google ─────────────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+# ─── Bing ───────────────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# ─── Sitemaps ───────────────────────────────────────────────────────
+Sitemap: https://qonixs.com/sitemap.xml

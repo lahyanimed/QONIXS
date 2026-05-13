@@ -30,8 +30,8 @@ const plans = [
   {
     id: "go100",
     name: "GO 100",
-    price: "Sur devis",
-    priceLabel: "HT / mois",
+    price: "399",
+    priceLabel: "Dhs HT / mois",
     quota: "100 Go",
     speed: "30 Mb/s",
     badge: "Populaire",
