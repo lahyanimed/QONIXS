@@ -184,7 +184,7 @@ export const blogArticles: BlogArticle[] = [
 <p>L'internet collectif est un levier financier pour le syndic :</p>
 <ul>
   <li><strong>Collecte simplifiée des charges</strong> — les résidents paient en même temps que leurs charges de syndic.</li>
-  <li><strong>Meilleure adhésion</strong> — un résident préfère payer 200 dirhams de charges de syndic incluant internet haut débit plutôt que 100 dirhams pour un opérateur médiocre (+ 100 dirhams de syndic séparément).</li>
+  <li><strong>Meilleure adhésion</strong> — un résident préfère payer 200 dirhams de charges de syndic incluant internet haut débit plutôt que 150 dirhams pour un abonnement opérateur de qualité médiocre. Résultat : moins de retards de paiement, moins de litiges.</li>
   <li><strong>Valeur ajoutée</strong> — renforce l'image de la résidence et facilite la commercialisation.</li>
 </ul>
 <h2>Avantage n°3 : Un WiFi unifié dans toute la résidence</h2>
@@ -195,16 +195,6 @@ export const blogArticles: BlogArticle[] = [
   <li>Au parking et dans les espaces extérieurs</li>
   <li>Chez le voisin avec le même code — idéal pour les visites</li>
 </ul>
-<h2>Tarification indicative</h2>
-<table>
-  <thead><tr><th>Nombre d'appartements</th><th>Tarif mensuel / appt</th><th>Débit garanti</th></tr></thead>
-  <tbody>
-    <tr><td>10–20 appartements</td><td>150–200 MAD</td><td>100–200 Mbps/appt</td></tr>
-    <tr><td>20–50 appartements</td><td>100–150 MAD</td><td>200–500 Mbps/appt</td></tr>
-    <tr><td>50–100 appartements</td><td>80–120 MAD</td><td>500 Mbps–1 Gbps/appt</td></tr>
-    <tr><td>100+ appartements</td><td>Sur devis</td><td>Jusqu'à 1 Gbps/appt</td></tr>
-  </tbody>
-</table>
 <h2>Contactez SettaTech pour votre résidence</h2>
 <p>SettaTech, distributeur officiel d'internet par satellite pour le compte de Nortis Télécom, intervient dans toutes les villes du Maroc. Étude gratuite sur demande.</p>
 `,
