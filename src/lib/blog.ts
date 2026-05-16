@@ -23,7 +23,24 @@ export const blogArticles: BlogArticle[] = [
     dateISO: "2026-05-10",
     image: "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=800&q=80&auto=format&fit=crop",
     imageAlt: "Routeur WiFi 6 moderne sur un bureau",
-    content: `<p>Le WiFi 6 (802.11ax) est devenu le standard incontournable en 2026 pour les foyers, bureaux et établissements hôteliers au Maroc.</p><h2>Pourquoi passer au WiFi 6 ?</h2><ul><li><strong>Débit théorique jusqu'à 9,6 Gbit/s</strong></li><li><strong>OFDMA</strong> — plusieurs appareils simultanément</li><li><strong>MU-MIMO 8×8</strong></li><li><strong>TWT</strong> — prolonge l'autonomie IoT</li></ul><h2>Notre top 3 pour le Maroc en 2026</h2><h3>🥇 TP-Link Archer AX73 — Meilleur global</h3><p>AX5400, 6 antennes, MU-MIMO 4×4. <strong>Prix : 899 MAD</strong></p><h3>🥈 TP-Link Archer AX55 — Meilleur rapport qualité/prix</h3><p>AX3000, port WAN 2,5 GbE. <strong>Prix : 649 MAD</strong></p><h3>🥉 TP-Link Archer BE220 — WiFi 7</h3><p>BE3600, futur-proof. <strong>Prix : 1 099 MAD</strong></p>`,
+    content: `
+<p>Le WiFi 6 (802.11ax) est devenu le standard incontournable en 2026 pour les foyers, bureaux et établissements hôteliers au Maroc.</p>
+<h2>Pourquoi passer au WiFi 6 ?</h2>
+<ul>
+  <li><strong>Débit théorique jusqu'à 9,6 Gbit/s</strong> — jusqu'à 3× plus rapide que le WiFi 5</li>
+  <li><strong>OFDMA</strong> — permet de servir plusieurs appareils simultanément</li>
+  <li><strong>MU-MIMO 8×8</strong> — jusqu'à 8 flux simultanés pour les réseaux denses</li>
+  <li><strong>TWT (Target Wake Time)</strong> — prolonge l'autonomie des appareils IoT</li>
+  <li><strong>BSS Coloring</strong> — réduit les interférences entre réseaux voisins</li>
+</ul>
+<h2>Notre top 3 pour le Maroc en 2026</h2>
+<h3>🥇 TP-Link Archer AX73 — Meilleur global</h3>
+<p>AX5400, 6 antennes haute performance, MU-MIMO 4×4. <strong>Prix : 899 MAD</strong></p>
+<h3>🥈 TP-Link Archer AX55 — Meilleur rapport qualité/prix</h3>
+<p>AX3000, port WAN 2,5 GbE, OneMesh compatible. <strong>Prix : 649 MAD</strong></p>
+<h3>🥉 TP-Link Archer BE220 — Meilleur futur-proof</h3>
+<p>WiFi 7 BE3600, latence ultra-faible. <strong>Prix : 1 099 MAD</strong></p>
+`,
   },
   {
     slug: "wifi-mesh-vs-routeur-traditionnel",
@@ -35,7 +52,18 @@ export const blogArticles: BlogArticle[] = [
     dateISO: "2026-05-08",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop",
     imageAlt: "Système WiFi Mesh multi-unités dans une maison moderne",
-    content: `<p>La question revient souvent : vaut-il mieux acheter un bon routeur WiFi ou investir dans un système Mesh ?</p><h2>Tableau comparatif</h2><table><thead><tr><th>Critère</th><th>Routeur Seul</th><th>Système Mesh</th></tr></thead><tbody><tr><td>Budget</td><td>✅ Moins cher</td><td>❌ Plus onéreux</td></tr><tr><td>Surface ≤ 150 m²</td><td>✅ Parfait</td><td>⚠️ Surdimensionné</td></tr><tr><td>Surface ≥ 200 m²</td><td>❌ Angles morts</td><td>✅ Idéal</td></tr><tr><td>Itinérance transparente</td><td>❌ Non</td><td>✅ Oui</td></tr></tbody></table><h3>Notre recommandation Mesh : TP-Link Deco X60 (Pack 3)</h3><p>Couvre jusqu'à 650 m², HomeShield intégré. <strong>Prix : 1 799 MAD</strong></p>`,
+    content: `
+<p>La question revient souvent chez nos clients : vaut-il mieux acheter un bon routeur WiFi ou investir dans un système Mesh ?</p>
+<h2>Avantages du WiFi Mesh</h2>
+<ul>
+  <li><strong>Couverture sans angle mort</strong> — chaque unité renforce le signal</li>
+  <li><strong>Itinérance transparente (roaming)</strong> — transition automatique</li>
+  <li><strong>Un seul réseau</strong> — pas besoin de gérer plusieurs SSIDs</li>
+  <li><strong>Évolutif</strong> — ajoutez des unités selon vos besoins</li>
+</ul>
+<h2>Notre recommandation Mesh : TP-Link Deco X60 (Pack 3)</h2>
+<p>WiFi 6, couvre jusqu'à 650 m² avec 3 unités, application Deco simple. <strong>Prix : 1 799 MAD</strong></p>
+`,
   },
   {
     slug: "wifi-hotel-maroc-guide-complet",
@@ -47,7 +75,17 @@ export const blogArticles: BlogArticle[] = [
     dateISO: "2026-05-05",
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80&auto=format&fit=crop",
     imageAlt: "Hall d'hôtel moderne au Maroc avec connexion WiFi",
-    content: `<p>Le WiFi est devenu la première attente des voyageurs dans les hôtels marocains.</p><h2>Les erreurs fréquentes des hôtels marocains</h2><ul><li><strong>Un seul routeur pour tout l'hôtel</strong></li><li><strong>Matériel grand public</strong> — limité à 30 connexions</li><li><strong>Pas de portail captif</strong></li></ul><h2>Points d'accès recommandés</h2><ul><li><strong>Ruijie RG-RAP2266 (AX3000)</strong> — 1 099 MAD</li><li><strong>TP-Link EAP613 (AX1800)</strong> — 1 050 MAD</li></ul><h2>Dimensionnement</h2><ul><li><strong>Riad 10–20 chambres</strong> : 4–6 AP, budget 8 000–15 000 MAD</li><li><strong>Hôtel 30–60 chambres</strong> : 15–25 AP, budget 30 000–55 000 MAD</li></ul>`,
+    content: `
+<p>Le WiFi est devenu la première attente des voyageurs dans les hôtels marocains. Un WiFi défaillant détruit l'expérience client.</p>
+<h2>Architecture recommandée pour un hôtel</h2>
+<ul>
+  <li><strong>Ruijie RG-RAP2266 (AX3000)</strong> — Excellent pour couloirs et chambres, 1 099 MAD</li>
+  <li><strong>TP-Link EAP613 (AX1800)</strong> — Compatible Omada avec portail captif, 1 050 MAD</li>
+  <li><strong>Ruijie RG-RAP6262(G) (IP68)</strong> — Zones extérieures (piscine, terrasse)</li>
+</ul>
+<h2>Dimensionnement</h2>
+<p>Petit hôtel (10–20 chambres) : 4–6 AP, budget matériel 8 000–15 000 MAD. Grand complexe (100+ chambres) : sur devis SettaTech.</p>
+`,
   },
   {
     slug: "internet-satellite-maroc-zones-rurales",
@@ -59,7 +97,23 @@ export const blogArticles: BlogArticle[] = [
     dateISO: "2026-05-02",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80&auto=format&fit=crop",
     imageAlt: "Antenne satellite et ciel étoilé pour connectivité rurale",
-    content: `<p>Des millions de Marocains en zones rurales n'ont pas accès à une connexion internet filaire fiable.</p><h2>Technologies disponibles</h2><h3>Satellite GEO</h3><ul><li>Débits : 10–50 Mbps, Latence : 600–800 ms</li><li>Tarif : 500–2 000 MAD/mois</li></ul><h3>Starlink (LEO)</h3><ul><li>Débits : 50–200 Mbps, Latence : 20–50 ms</li><li>Tarif : ~120 USD/mois résidentiel</li></ul><h2>Cas d'usage</h2><ul><li>Fermes et exploitations agricoles</li><li>Établissements scolaires ruraux</li><li>Stations touristiques de montagne</li><li>Chantiers isolés</li></ul>`,
+    content: `
+<p>Des millions de Marocains en zones rurales n'ont pas accès à une connexion internet filaire fiable. L'internet par satellite est souvent la seule solution.</p>
+<h2>Les technologies disponibles au Maroc</h2>
+<h3>Satellite Géostationnaire (GEO)</h3>
+<ul>
+  <li>Débits : 10–50 Mbps, Latence : 600–800 ms</li>
+  <li>Couverture : tout le Maroc, Sahara inclus</li>
+  <li>Tarif : 500–2 000 MAD/mois</li>
+</ul>
+<h3>Satellite Basse Orbite (LEO) — Starlink</h3>
+<ul>
+  <li>Débits : 50–200 Mbps, Latence : 20–50 ms</li>
+  <li>Disponibilité au Maroc : partielle en 2026, en expansion</li>
+</ul>
+<h2>Faire appel à SettaTech</h2>
+<p>SettaTech, distributeur officiel d'internet par satellite pour le compte de Nortis Télécom, réalise des études de faisabilité gratuites.</p>
+`,
   },
   {
     slug: "installer-camera-ip-tutoriel",
@@ -71,7 +125,20 @@ export const blogArticles: BlogArticle[] = [
     dateISO: "2026-04-28",
     image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80&auto=format&fit=crop",
     imageAlt: "Installation d'une caméra IP de surveillance à domicile",
-    content: `<p>Les caméras IP Tapo sont parmi les plus vendues au Maroc pour leur simplicité d'installation.</p><h2>Étapes d'installation</h2><ol><li>Télécharger l'app Tapo (iOS/Android)</li><li>Choisir l'emplacement (2–3 m de hauteur)</li><li>Fixer le support mural</li><li>Brancher et configurer via l'app</li><li>Activer détection de mouvement et enregistrement</li></ol><h2>Enregistrement</h2><ul><li><strong>Carte microSD</strong> jusqu'à 512 Go — local, sans abonnement</li><li><strong>Tapo Care cloud</strong> — 30 jours, ~3 USD/mois</li></ul><h2>Problèmes courants</h2><ul><li>Ne se connecte pas : utiliser réseau 2,4 GHz</li><li>Image floue la nuit : nettoyer l'objectif</li></ul>`,
+    content: `
+<p>Les caméras IP Tapo (TP-Link) sont parmi les plus vendues au Maroc pour leur simplicité et leur rapport qualité/prix.</p>
+<h2>Étapes d'installation</h2>
+<ol>
+  <li>Téléchargez l'application <strong>Tapo</strong> sur iOS ou Android</li>
+  <li>Choisissez l'emplacement optimal (entrée, salon, parking)</li>
+  <li>Fixez la caméra avec le gabarit inclus</li>
+  <li>Configurez via l'app : appuyez sur + → Ajouter un appareil</li>
+  <li>Connectez au réseau WiFi 2,4 GHz</li>
+</ol>
+<h2>Enregistrement</h2>
+<p>Carte microSD 128 Go (~80–120 MAD) pour 7–15 jours d'enregistrement, ou Tapo Care cloud (~3 USD/mois).</p>
+<p>SettaTech propose des services d'installation clé en main partout au Maroc.</p>
+`,
   },
   {
     slug: "tp-link-vs-ruijie-comparatif",
@@ -83,7 +150,64 @@ export const blogArticles: BlogArticle[] = [
     dateISO: "2026-04-25",
     image: "https://images.unsplash.com/photo-1517976487492-5750f3195933?w=800&q=80&auto=format&fit=crop",
     imageAlt: "Comparaison équipements réseau TP-Link et Ruijie Reyee",
-    content: `<p>TP-Link et Ruijie Reyee sont les deux marques les plus distribuées par SettaTech au Maroc.</p><h2>Recommandations par usage</h2><h3>Usage domestique</h3><p>→ <strong>TP-Link</strong> : gamme plus large, app plus simple, prix accessibles.</p><h3>Petite et moyenne entreprise</h3><p>→ <strong>TP-Link Omada</strong> : écosystème complet avec contrôleur centralisé gratuit.</p><h3>Hôtels et résidences</h3><p>→ <strong>Ruijie Reyee pour les AP</strong> (modèles IP68) + <strong>TP-Link pour les switches</strong>.</p><h3>Opérateurs télécom</h3><p>→ <strong>Ruijie Networks</strong> — SettaTech est partenaire officiel pour IAM et Orange Maroc.</p>`,
+    content: `
+<p>TP-Link et Ruijie Reyee sont les deux marques les plus distribuées par SettaTech au Maroc.</p>
+<h2>Nos recommandations par usage</h2>
+<p><strong>Usage domestique</strong> → TP-Link sans hésitation : gamme plus large, application plus simple.</p>
+<p><strong>PME</strong> → TP-Link Omada : écosystème complet avec contrôleur centralisé gratuit.</p>
+<p><strong>Hôtels et résidences</strong> → Ruijie Reyee pour les AP (robustesse, IP68) + TP-Link pour les switches.</p>
+<p><strong>Opérateurs télécom</strong> → Ruijie Networks (GPON, OLT) — SettaTech est distributeur officiel d'internet par satellite pour le compte de Nortis Télécom.</p>
+<h2>Conclusion</h2>
+<p>Les deux marques sont de qualité. TP-Link pour 80% des besoins, Ruijie pour les projets hôteliers et télécom.</p>
+`,
+  },
+  {
+    slug: "internet-collectif-residence-maroc",
+    title: "Internet collectif pour résidences au Maroc : La solution intelligente",
+    description: "Découvrez comment l'internet collectif transforme la connectivité dans les résidences au Maroc — débit jusqu'à 1 Gbit/s, WiFi unifié partout et collecte simplifiée des charges.",
+    category: "B2B",
+    readTime: "6 min",
+    date: "16 mai 2026",
+    dateISO: "2026-05-16",
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80&auto=format&fit=crop",
+    imageAlt: "Résidence moderne au Maroc avec connexion WiFi collectif",
+    content: `
+<p>Dans les résidences et immeubles au Maroc, chaque résident paie son propre abonnement internet — souvent pour un débit médiocre et un tarif élevé. L'internet collectif change complètement la donne.</p>
+<h2>Avantage n°1 : Un débit exceptionnel pour un prix imbattable</h2>
+<p>Grâce à la mutualisation, l'internet collectif offre des débits allant <strong>jusqu'à 1 Gbit/s à partir de seulement 100 dirhams par mois</strong>.</p>
+<ul>
+  <li><strong>Streaming 4K</strong> sans interruption pour toute la famille</li>
+  <li><strong>Télétravail</strong> fluide avec visioconférences en HD</li>
+  <li><strong>Gaming en ligne</strong> avec une latence minimale</li>
+</ul>
+<h2>Avantage n°2 : Un outil puissant pour le syndic</h2>
+<p>L'internet collectif est un levier financier pour le syndic :</p>
+<ul>
+  <li><strong>Collecte simplifiée des charges</strong> — les résidents paient en même temps que leurs charges de syndic.</li>
+  <li><strong>Meilleure adhésion</strong> — un résident préfère payer 200 dirhams de charges de syndic incluant internet haut débit plutôt que 100 dirhams pour un opérateur médiocre (+ 100 dirhams de syndic séparément).</li>
+  <li><strong>Valeur ajoutée</strong> — renforce l'image de la résidence et facilite la commercialisation.</li>
+</ul>
+<h2>Avantage n°3 : Un WiFi unifié dans toute la résidence</h2>
+<p>Les résidents <strong>se connectent avec le même code WiFi partout dans la résidence</strong> :</p>
+<ul>
+  <li>Dans leur appartement, à tous les étages</li>
+  <li>Dans les parties communes et le hall d'entrée</li>
+  <li>Au parking et dans les espaces extérieurs</li>
+  <li>Chez le voisin avec le même code — idéal pour les visites</li>
+</ul>
+<h2>Tarification indicative</h2>
+<table>
+  <thead><tr><th>Nombre d'appartements</th><th>Tarif mensuel / appt</th><th>Débit garanti</th></tr></thead>
+  <tbody>
+    <tr><td>10–20 appartements</td><td>150–200 MAD</td><td>100–200 Mbps/appt</td></tr>
+    <tr><td>20–50 appartements</td><td>100–150 MAD</td><td>200–500 Mbps/appt</td></tr>
+    <tr><td>50–100 appartements</td><td>80–120 MAD</td><td>500 Mbps–1 Gbps/appt</td></tr>
+    <tr><td>100+ appartements</td><td>Sur devis</td><td>Jusqu'à 1 Gbps/appt</td></tr>
+  </tbody>
+</table>
+<h2>Contactez SettaTech pour votre résidence</h2>
+<p>SettaTech, distributeur officiel d'internet par satellite pour le compte de Nortis Télécom, intervient dans toutes les villes du Maroc. Étude gratuite sur demande.</p>
+`,
   },
 ];
 
