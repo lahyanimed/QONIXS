@@ -12,6 +12,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
+      {
+        protocol: "https",
+        hostname: "singapore-1312056779.cos.accelerate.myqcloud.com",
+      },
     ],
     // Désactive l'optimisation pour les img tags natifs
     unoptimized: true,
