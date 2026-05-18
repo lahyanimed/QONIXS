@@ -49,6 +49,11 @@ export const products: Product[] = [
   { id: 1, slug: "archer-ax73", name: "Archer AX73", category: "routeurs", subcategory: "wifi6", brand: "TP-Link", price: 899, oldPrice: 1099, badge: "Bestseller", rating: 4.9, reviews: 247, inStock: true, image: "router", imageUrl: "/assets/images/products/archer-ax73.jpg", specs: { wifi: "WiFi 6", speed: "AX5400", antennas: 6, usb: "USB 3.0", ports: 4 }, description: "Routeur WiFi 6 AX5400 avec 6 antennes haute performance, MU-MIMO et Beamforming. Idéal pour les grandes maisons et les familles nombreuses." },
   { id: 2, slug: "archer-ax55", name: "Archer AX55", category: "routeurs", subcategory: "wifi6", brand: "TP-Link", price: 649, oldPrice: null, badge: "Nouveau", rating: 4.7, reviews: 134, inStock: true, image: "router", imageUrl: "/assets/images/products/archer-ax55.jpg", specs: { wifi: "WiFi 6", speed: "AX3000", antennas: 4, usb: "USB 3.0", ports: 4 }, description: "Routeur WiFi 6 AX3000 dual-band avec OFDMA et MU-MIMO pour des connexions plus fluides." },
   { id: 3, slug: "archer-ax23", name: "Archer AX23", category: "routeurs", subcategory: "wifi6", brand: "TP-Link", price: 449, oldPrice: 529, badge: null, rating: 4.6, reviews: 89, inStock: true, image: "router", imageUrl: "/assets/images/products/archer-ax23.jpg", specs: { wifi: "WiFi 6", speed: "AX1800", antennas: 4, usb: null, ports: 4 }, description: "Routeur WiFi 6 entrée de gamme idéal pour les petits appartements." },
+  // ROUTEURS WiFi 6 — Ruijie
+  { id: 30, slug: "rg-ew3000gx", name: "RG-EW3000GX", category: "routeurs", subcategory: "wifi6", brand: "Ruijie", price: 800, oldPrice: null, badge: "Dual-WAN", rating: 4.7, reviews: 68, inStock: true, image: "router", imageUrl: "https://singapore-1312056779.cos.accelerate.myqcloud.com/background/other/2024-06-26/b7c5d525af1743ec8dfba30ddcbcf7f8.png", specs: { wifi: "WiFi 6", speed: "AX3000", antennas: 5, usb: null, ports: 5 }, description: "Routeur Gigabit Wi-Fi 6 Dual-WAN 3000 Mbps — 574 Mbps (2,4 GHz) + 2402 Mbps (5 GHz). 5 antennes, 5 ports Gigabit, double WAN pour agrégation de bande passante, 160 MHz, Reyee Mesh 3.0. Idéal villas, grands appartements et bureaux SOHO." },
+  { id: 31, slug: "rg-ew3000gx-pro", name: "RG-EW3000GX PRO", category: "routeurs", subcategory: "wifi6", brand: "Ruijie", price: 1000, oldPrice: null, badge: "Gaming", rating: 4.8, reviews: 41, inStock: true, image: "router", imageUrl: "https://singapore-1312056779.cos.accelerate.myqcloud.com/background/other/2023-11-01/27b60a7d173944ef8d3056d14f41c9ad.png", specs: { wifi: "WiFi 6", speed: "AX3000", antennas: 6, usb: null, ports: 4 }, description: "Routeur Gaming Gigabit Wi-Fi 6 3000 Mbps — 2402 Mbps (5 GHz) + 574 Mbps (2,4 GHz). 6 antennes haute performance, signal Wi-Fi puissant, Reyee Mesh 3.0, gestion cloud Ruijie. Idéal gamers, villas et espaces nécessitant une couverture maximale." },
+
+  // ROUTEURS WiFi 5
   { id: 4, slug: "archer-c80", name: "Archer C80", category: "routeurs", subcategory: "wifi5", brand: "TP-Link", price: 549, oldPrice: 649, badge: "-15%", rating: 4.4, reviews: 198, inStock: true, image: "router", imageUrl: "/assets/images/products/archer-c80.jpg", specs: { wifi: "WiFi 5", speed: "AC1900", antennas: 4, usb: "USB 2.0", ports: 4 }, description: "Routeur WiFi 5 AC1900 avec MU-MIMO et Beamforming pour une expérience réseau fluide." },
   { id: 5, slug: "archer-c6", name: "Archer C6", category: "routeurs", subcategory: "wifi5", brand: "TP-Link", price: 349, oldPrice: null, badge: "Top vente", rating: 4.5, reviews: 423, inStock: true, image: "router", imageUrl: "/assets/images/products/archer-c6.jpg", specs: { wifi: "WiFi 5", speed: "AC1200", antennas: 5, usb: null, ports: 4 }, description: "Le routeur WiFi 5 le plus vendu au Maroc. Excellent rapport qualité-prix." },
   { id: 29, slug: "rg-ew1200g-pro", name: "RG-EW1200G PRO", category: "routeurs", subcategory: "wifi5", brand: "Ruijie", price: 600, oldPrice: null, badge: "Nouveau", rating: 4.6, reviews: 52, inStock: true, image: "router", imageUrl: "https://singapore-1312056779.cos.accelerate.myqcloud.com/FU/Upload/Product/2022/5-25/20225255863243.png", specs: { wifi: "WiFi 5", speed: "AC1267", antennas: 6, usb: null, ports: 4 }, description: "Routeur Gigabit sans fil Dual Band 1267 Mbps — 400 Mbps (2,4 GHz) + 867 Mbps (5 GHz). 6 antennes omnidirectionnelles, 4 ports Gigabit, MU-MIMO, Reyee Mesh 3.0, gestion cloud Ruijie. Idéal villas, bureaux et SOHO." },
@@ -93,7 +98,7 @@ export const products: Product[] = [
 ];
 
 export const categories = [
-  { slug: "routeurs", name: "Routeurs WiFi", icon: "router", count: 7 },
+  { slug: "routeurs", name: "Routeurs WiFi", icon: "router", count: 9 },
   { slug: "access-points", name: "Points d'accès", icon: "ap", count: 7 },
   { slug: "mesh", name: "WiFi Mesh", icon: "mesh", count: 3 },
   { slug: "switches", name: "Switches", icon: "switch", count: 6 },
@@ -122,4 +127,4 @@ export function searchProducts(query: string): Product[] {
 
 export function formatPrice(price: number): string {
   return price.toLocaleString("fr-MA") + " MAD";
-    }
+   }
