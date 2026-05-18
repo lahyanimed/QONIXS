@@ -51,6 +51,7 @@ export const products: Product[] = [
   { id: 3, slug: "archer-ax23", name: "Archer AX23", category: "routeurs", subcategory: "wifi6", brand: "TP-Link", price: 449, oldPrice: 529, badge: null, rating: 4.6, reviews: 89, inStock: true, image: "router", imageUrl: "/assets/images/products/archer-ax23.jpg", specs: { wifi: "WiFi 6", speed: "AX1800", antennas: 4, usb: null, ports: 4 }, description: "Routeur WiFi 6 entrée de gamme idéal pour les petits appartements." },
   { id: 4, slug: "archer-c80", name: "Archer C80", category: "routeurs", subcategory: "wifi5", brand: "TP-Link", price: 549, oldPrice: 649, badge: "-15%", rating: 4.4, reviews: 198, inStock: true, image: "router", imageUrl: "/assets/images/products/archer-c80.jpg", specs: { wifi: "WiFi 5", speed: "AC1900", antennas: 4, usb: "USB 2.0", ports: 4 }, description: "Routeur WiFi 5 AC1900 avec MU-MIMO et Beamforming pour une expérience réseau fluide." },
   { id: 5, slug: "archer-c6", name: "Archer C6", category: "routeurs", subcategory: "wifi5", brand: "TP-Link", price: 349, oldPrice: null, badge: "Top vente", rating: 4.5, reviews: 423, inStock: true, image: "router", imageUrl: "/assets/images/products/archer-c6.jpg", specs: { wifi: "WiFi 5", speed: "AC1200", antennas: 5, usb: null, ports: 4 }, description: "Le routeur WiFi 5 le plus vendu au Maroc. Excellent rapport qualité-prix." },
+  { id: 29, slug: "rg-ew1200g-pro", name: "RG-EW1200G PRO", category: "routeurs", subcategory: "wifi5", brand: "Ruijie", price: 600, oldPrice: null, badge: "Nouveau", rating: 4.6, reviews: 52, inStock: true, image: "router", imageUrl: "https://singapore-1312056779.cos.accelerate.myqcloud.com/FU/Upload/Product/2022/5-25/20225255863243.png", specs: { wifi: "WiFi 5", speed: "AC1267", antennas: 6, usb: null, ports: 4 }, description: "Routeur Gigabit sans fil Dual Band 1267 Mbps — 400 Mbps (2,4 GHz) + 867 Mbps (5 GHz). 6 antennes omnidirectionnelles, 4 ports Gigabit, MU-MIMO, Reyee Mesh 3.0, gestion cloud Ruijie. Idéal villas, bureaux et SOHO." },
 
   // ROUTEURS 4G/5G
   { id: 6, slug: "tl-mr6400", name: "TL-MR6400", category: "4g-lte", subcategory: null, brand: "TP-Link", price: 799, oldPrice: 899, badge: "Top vente", rating: 4.3, reviews: 156, inStock: true, image: "4g", imageUrl: "", specs: { wifi: "WiFi 4", speed: "N300", sim: "4G LTE", antennas: 2, ports: 4 }, description: "Routeur 4G LTE 300Mbps avec slot SIM intégré. Parfait pour les zones sans fibre." },
@@ -92,7 +93,7 @@ export const products: Product[] = [
 ];
 
 export const categories = [
-  { slug: "routeurs", name: "Routeurs WiFi", icon: "router", count: 6 },
+  { slug: "routeurs", name: "Routeurs WiFi", icon: "router", count: 7 },
   { slug: "access-points", name: "Points d'accès", icon: "ap", count: 7 },
   { slug: "mesh", name: "WiFi Mesh", icon: "mesh", count: 3 },
   { slug: "switches", name: "Switches", icon: "switch", count: 6 },
@@ -121,4 +122,4 @@ export function searchProducts(query: string): Product[] {
 
 export function formatPrice(price: number): string {
   return price.toLocaleString("fr-MA") + " MAD";
-}
+    }
