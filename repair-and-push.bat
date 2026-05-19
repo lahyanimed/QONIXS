@@ -1,0 +1,13 @@
+@echo off
+cd /d "C:\settatech claude\qonixs"
+echo Removing corrupted index files...
+del /f ".git\index.lock" 2>nul
+del /f ".git\index" 2>nul
+echo Rebuilding index...
+git reset HEAD
+echo Pulling remote changes...
+git pull origin main --no-rebase
+echo Pushing...
+git push origin main
+echo Exit: %ERRORLEVEL%
+pause

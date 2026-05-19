@@ -115,7 +115,7 @@ export default function ArticlePage({ params }: Props) {
         <div className="mt-12 bg-primary/5 border border-primary/20 rounded-2xl p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <div className="flex-1">
             <p className="font-syne font-bold text-dark text-lg mb-1">
-              Besoin d&apos;un conseil personnalisé ?
+              Besoin d'un conseil personnalisé ?
             </p>
             <p className="font-dm text-gray-500 text-sm">
               Nos experts SettaTech sont disponibles par WhatsApp pour répondre à vos questions techniques.

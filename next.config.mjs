@@ -26,6 +26,4 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   // TypeScript : ne bloque pas le build pour les erreurs de type mineures
   typescript: { ignoreBuildErrors: true },
-};
-
-export default nextConfig;
+};

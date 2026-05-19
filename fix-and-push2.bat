@@ -1,0 +1,13 @@
+@echo off
+cd /d "C:\settatech claude\qonixs"
+echo Removing lock file...
+del /f ".git\index.lock" 2>nul
+echo Stashing unstaged changes...
+git stash
+echo Pulling from remote with merge...
+git pull origin main
+echo Pushing...
+git push origin main > push-result.txt 2>&1
+echo Exit: %ERRORLEVEL% >> push-result.txt
+git stash pop
+echo Done.

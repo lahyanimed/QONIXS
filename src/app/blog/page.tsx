@@ -213,13 +213,4 @@ export default function BlogPage() {
             </a>
             <Link
               href="/services"
-              className="inline-flex items-center justify-center px-6 py-3 border border-white/30 text-white rounded-xl font-dm font-medium hover:bg-white/10 transition-colors"
-            >
-              Voir nos services
-            </Link>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+              className="inline-flex items-center justify-center px-6 py-3 border border
