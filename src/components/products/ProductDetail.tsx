@@ -9,11 +9,11 @@ import { getProductSVG } from "@/components/svg/ProductSVGs";
 import ProductCard from "@/components/products/ProductCard";
 
 const specLabels: Record<string, string> = {
-  wifi: "WiFi", speed: "Débit", antennas: "Antennes", usb: "USB", ports: "Ports",
-  sim: "SIM", coverage: "Couverture", units: "Unités", backhaul: "Backhaul",
+  wifi: "WiFi", speed: "D\u00e9bit", antennas: "Antennes", usb: "USB", ports: "Ports",
+  sim: "SIM", coverage: "Couverture", units: "Unit\u00e9s", backhaul: "Backhaul",
   managed: "Manageable", poe: "PoE", form: "Format", budget: "Budget PoE",
-  sfp: "Ports SFP", l2: "Layer 2", resolution: "Résolution", night: "Vision nocturne",
-  outdoor: "Extérieur", motion: "Détection mouvement", audio: "Audio",
+  sfp: "Ports SFP", l2: "Layer 2", resolution: "R\u00e9solution", night: "Vision nocturne",
+  outdoor: "Ext\u00e9rieur", motion: "D\u00e9tection mouvement", audio: "Audio",
   storage: "Stockage", alexa: "Alexa/Google", pan: "Panoramique", tilt: "Inclinaison",
 };
 
@@ -79,7 +79,7 @@ export default function ProductDetail({ product, relatedProducts, categoryName }
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={product.imageUrl}
-                alt={`${product.name} — ${product.brand} — Qonixs Maroc`}
+                alt={`${product.name} \u2014 ${product.brand} \u2014 Qonixs Maroc`}
                 className="object-contain max-h-[260px] w-auto"
                 onError={() => setImgError(true)}
               />
@@ -153,29 +153,46 @@ export default function ProductDetail({ product, relatedProducts, categoryName }
 
           {/* Stock */}
           <div className="flex items-center gap-2 mb-6">
-            <div className="w-2 h-2 rounded-full bg-green-500" />
-            <span className="text-sm font-dm text-green-600">En stock — Livraison sous 24-48h</span>
+            {product.inStock ? (
+              <>
+                <div className="w-2 h-2 rounded-full bg-green-500" />
+                <span className="text-sm font-dm text-green-600">En stock \u2014 Livraison sous 24-48h</span>
+              </>
+            ) : (
+              <>
+                <div className="w-2 h-2 rounded-full bg-red-500" />
+                <span className="text-sm font-dm text-red-500 font-medium">Rupture de stock \u2014 Disponible sur commande WhatsApp</span>
+              </>
+            )}
           </div>
 
           {/* Actions */}
           <div className="flex gap-3">
-            <button
-              onClick={handleAdd}
-              className={`flex-1 py-3 rounded-xl font-dm font-medium text-sm transition-all duration-300 ${
-                added
-                  ? "bg-green-500 text-white"
-                  : "bg-primary text-white hover:bg-primary-dark"
-              }`}
-            >
-              {added ? "✓ Ajouté au panier" : "Ajouter au panier"}
-            </button>
-            <Link
-              href="/panier"
-              onClick={handleAdd}
-              className="flex-1 py-3 rounded-xl border-2 border-dark text-dark font-dm font-medium text-sm text-center hover:bg-dark hover:text-white transition-colors"
-            >
-              Acheter maintenant
-            </Link>
+            {product.inStock ? (
+              <>
+                <button
+                  onClick={handleAdd}
+                  className={`flex-1 py-3 rounded-xl font-dm font-medium text-sm transition-all duration-300 ${
+                    added
+                      ? "bg-green-500 text-white"
+                      : "bg-primary text-white hover:bg-primary-dark"
+                  }`}
+                >
+                  {added ? "\u2713 Ajout\u00e9 au panier" : "Ajouter au panier"}
+                </button>
+                <Link
+                  href="/panier"
+                  onClick={handleAdd}
+                  className="flex-1 py-3 rounded-xl border-2 border-dark text-dark font-dm font-medium text-sm text-center hover:bg-dark hover:text-white transition-colors"
+                >
+                  Acheter maintenant
+                </Link>
+              </>
+            ) : (
+              <div className="flex-1 py-3 rounded-xl bg-gray-100 text-gray-400 font-dm font-medium text-sm text-center cursor-not-allowed">
+                Produit indisponible
+              </div>
+            )}
           </div>
 
           {/* WhatsApp CTA */}
@@ -198,7 +215,7 @@ export default function ProductDetail({ product, relatedProducts, categoryName }
         <div className="flex gap-6">
           {([
             { key: "description", label: "Description" },
-            { key: "specs", label: "Spécifications" },
+            { key: "specs", label: "Sp\u00e9cifications" },
             { key: "reviews", label: `Avis (${product.reviews})` },
           ] as const).map((tab) => (
             <button
@@ -221,14 +238,15 @@ export default function ProductDetail({ product, relatedProducts, categoryName }
           <div className="prose prose-sm max-w-none font-dm text-gray-600 leading-relaxed">
             <p>{product.description}</p>
             <p className="mt-4">
-              Le {product.name} de {product.brand} est un équipement réseau professionnel
-              conçu pour offrir des performances optimales. Compatible avec les dernières
-              normes {product.specs.wifi || "réseau"}, il garantit une connectivité fiable et rapide
-              pour votre domicile, hôtel ou entreprise au Maroc.
+              Le {product.name} de {product.brand} est un \u00e9quipement r\u00e9seau professionnel
+              con\u00e7u pour offrir des performances optimales. Compatible avec les derni\u00e8res
+              normes {product.specs.wifi || "r\u00e9seau"}, il garantit une connectivit\u00e9 fiable et rapide
+              pour votre domicile, h\u00f4tel ou entreprise au Maroc.
             </p>
             <p className="mt-4 text-sm text-gray-500">
-              Disponible en stock chez Qonixs by SettaTech — Settat, Maroc. Livraison express 24-48h
-              partout au Maroc. Support technique 7j/7 inclus.
+              {product.inStock
+                ? "Disponible en stock chez Qonixs by SettaTech \u2014 Settat, Maroc. Livraison express 24-48h partout au Maroc. Support technique 7j/7 inclus."
+                : "Ce produit est actuellement en rupture de stock. Contactez-nous sur WhatsApp pour \u00eatre inform\u00e9 de sa disponibilit\u00e9 ou passer une commande sp\u00e9ciale."}
             </p>
           </div>
         )}
@@ -251,9 +269,9 @@ export default function ProductDetail({ product, relatedProducts, categoryName }
         {activeTab === "reviews" && (
           <div className="text-center py-8">
             <p className="text-gray-400 font-dm text-sm">
-              {product.reviews} avis clients — Note moyenne: {product.rating}/5
+              {product.reviews} avis clients \u2014 Note moyenne: {product.rating}/5
             </p>
-            <p className="text-gray-300 font-dm text-xs mt-2">Les avis détaillés seront bientôt disponibles.</p>
+            <p className="text-gray-300 font-dm text-xs mt-2">Les avis d\u00e9taill\u00e9s seront bient\u00f4t disponibles.</p>
           </div>
         )}
       </div>

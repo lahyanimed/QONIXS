@@ -12,6 +12,7 @@ function Badge({ text }: { text: string }) {
   if (text === "Bestseller" || text === "Top vente") color = "bg-orange-500 text-white";
   if (text === "Nouveau" || text === "WiFi 6E") color = "bg-blue-500 text-white";
   if (text === "En stock") color = "bg-green-500 text-white";
+  if (text === "Rupture de stock") color = "bg-red-500 text-white";
 
   return (
     <span className={`absolute top-3 left-3 px-2 py-0.5 text-[10px] font-bold rounded-md ${color} z-10`}>
@@ -87,7 +88,10 @@ export default function ProductCard({ product }: { product: Product }) {
       className="relative bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg transition-shadow group"
     >
       <Link href={`/produit/${product.slug}`} className="block">
-        {product.badge && <Badge text={product.badge} />}
+        {!product.inStock
+          ? <Badge text="Rupture de stock" />
+          : product.badge && <Badge text={product.badge} />
+        }
 
         <motion.button
           initial={{ opacity: 0 }}
@@ -101,10 +105,11 @@ export default function ProductCard({ product }: { product: Product }) {
         </motion.button>
 
         {/* Image */}
-        <div className="p-4 pb-0 flex items-center justify-center h-44 bg-gray-50/50">
+        <div className="p-4 pb-0 flex items-center justify-center h-44 bg-gray-50/50 relative">
           <motion.div
             animate={{ scale: hovered ? 1.05 : 1 }}
             transition={{ duration: 0.2 }}
+            className={!product.inStock ? "opacity-40 grayscale" : ""}
           >
             <ProductImage product={product} />
           </motion.div>
@@ -134,16 +139,22 @@ export default function ProductCard({ product }: { product: Product }) {
                 </span>
               )}
             </div>
-            <button
-              onClick={handleAdd}
-              className={`px-3 py-1.5 text-xs font-dm font-medium rounded-lg transition-all duration-300 ${
-                added
-                  ? "bg-green-500 text-white"
-                  : "bg-primary/10 text-primary hover:bg-primary hover:text-white"
-              }`}
-            >
-              {added ? "✓ Ajouté" : "Ajouter"}
-            </button>
+            {product.inStock ? (
+              <button
+                onClick={handleAdd}
+                className={`px-3 py-1.5 text-xs font-dm font-medium rounded-lg transition-all duration-300 ${
+                  added
+                    ? "bg-green-500 text-white"
+                    : "bg-primary/10 text-primary hover:bg-primary hover:text-white"
+                }`}
+              >
+                {added ? "✓ Ajouté" : "Ajouter"}
+              </button>
+            ) : (
+              <span className="px-3 py-1.5 text-xs font-dm font-medium rounded-lg bg-gray-100 text-gray-400 cursor-not-allowed">
+                Indisponible
+              </span>
+            )}
           </div>
         </div>
       </Link>
