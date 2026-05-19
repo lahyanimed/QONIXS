@@ -89,9 +89,9 @@ export const products: Product[] = [
   { id: 25, slug: "rg-rap2200e", name: "RG-RAP2200(E)", category: "access-points", subcategory: "indoor", brand: "Ruijie", price: 700, oldPrice: null, badge: "Top vente", rating: 4.4, reviews: 156, inStock: true, image: "ap", imageUrl: "/products/RG-RAP2200(E).png", specs: { wifi: "WiFi 5", speed: "AC1300", ports: 2, poe: "802.3af", form: "Plafond" }, description: "Point d'accès plafonnier AC1300 Dual Band, 867 Mbps à 5 GHz + 400 Mbps à 2,4 GHz. 2 ports Ethernet Gigabit. Support 802.11a/b/g/n/ac Wave1/Wave2." },
   { id: 26, slug: "rg-rap2260g", name: "RG-RAP2260(G)", category: "access-points", subcategory: "indoor", brand: "Ruijie", price: 1100, oldPrice: null, badge: null, rating: 4.6, reviews: 72, inStock: true, image: "ap", imageUrl: "/products/RG-RAP2260(G).png", specs: { wifi: "WiFi 6", speed: "AX1800", ports: 2, poe: "802.3at", form: "Plafond" }, description: "Point d'accès plafonnier AX1800 Wi-Fi 6 Dual-Band Gigabit. Double ports LAN Gigabit, antennes intégrées. Jusqu'à 1775 Mbps." },
   // POINTS D'ACCÈS WiFi — TP-Link Omada
-  { id: 20, slug: "eap613", name: "EAP613", category: "access-points", subcategory: "indoor", brand: "TP-Link", price: 1050, oldPrice: null, badge: "Nouveau", rating: 4.7, reviews: 63, inStock: false, image: "ap", imageUrl: "/assets/images/products/eap613.jpg", specs: { wifi: "WiFi 6", speed: "AX1800", ports: 1, poe: "802.3at", form: "Plafond" }, description: "Point d'accès Wi-Fi 6 double bande AX1800 pour montage au plafond. 1 port RJ45 Gigabit, 574 Mbit/s à 2,4 GHz + 1201 Mbit/s à 5 GHz. PoE 802.3at et alimentation 12V DC." },
-  { id: 21, slug: "eap653", name: "EAP653", category: "access-points", subcategory: "indoor", brand: "TP-Link", price: 999, oldPrice: null, badge: null, rating: 4.6, reviews: 48, inStock: false, image: "ap", imageUrl: "/assets/images/products/eap653.jpg", specs: { wifi: "WiFi 6", speed: "AX3000", ports: 1, poe: "802.3at", form: "Plafond" }, description: "Point d'accès plafonnier Wi-Fi 6 double bande AX3000. Haute performance pour bureaux et espaces professionnels." },
-  { id: 22, slug: "eap723", name: "EAP723", category: "access-points", subcategory: "indoor", brand: "TP-Link", price: 1600, oldPrice: null, badge: "WiFi 7", rating: 4.9, reviews: 27, inStock: false, image: "ap", imageUrl: "/assets/images/products/eap723.jpg", specs: { wifi: "WiFi 7", speed: "BE3600", ports: 1, poe: "802.3at", form: "Plafond" }, description: "Point d'accès Wi-Fi 7 double bande Omada BE3600 pour montage au plafond. 1 port RJ45 2,5 GHz, 688 Mbit/s à 2,4 GHz + 2880 Mbit/s à 5 GHz. PoE+ 802.3at et 12V DC." },
+  { id: 20, slug: "eap613", name: "EAP613", category: "access-points", subcategory: "indoor", brand: "TP-Link", price: 1050, oldPrice: null, badge: "Nouveau", rating: 4.7, reviews: 63, inStock: true, image: "ap", imageUrl: "/assets/images/products/eap613.jpg", specs: { wifi: "WiFi 6", speed: "AX1800", ports: 1, poe: "802.3at", form: "Plafond" }, description: "Point d'accès Wi-Fi 6 double bande AX1800 pour montage au plafond. 1 port RJ45 Gigabit, 574 Mbit/s à 2,4 GHz + 1201 Mbit/s à 5 GHz. PoE 802.3at et alimentation 12V DC." },
+  { id: 21, slug: "eap653", name: "EAP653", category: "access-points", subcategory: "indoor", brand: "TP-Link", price: 999, oldPrice: null, badge: null, rating: 4.6, reviews: 48, inStock: true, image: "ap", imageUrl: "/assets/images/products/eap653.jpg", specs: { wifi: "WiFi 6", speed: "AX3000", ports: 1, poe: "802.3at", form: "Plafond" }, description: "Point d'accès plafonnier Wi-Fi 6 double bande AX3000. Haute performance pour bureaux et espaces professionnels." },
+  { id: 22, slug: "eap723", name: "EAP723", category: "access-points", subcategory: "indoor", brand: "TP-Link", price: 1600, oldPrice: null, badge: "WiFi 7", rating: 4.9, reviews: 27, inStock: true, image: "ap", imageUrl: "/assets/images/products/eap723.jpg", specs: { wifi: "WiFi 7", speed: "BE3600", ports: 1, poe: "802.3at", form: "Plafond" }, description: "Point d'accès Wi-Fi 7 double bande Omada BE3600 pour montage au plafond. 1 port RJ45 2,5 GHz, 688 Mbit/s à 2,4 GHz + 2880 Mbit/s à 5 GHz. PoE+ 802.3at et 12V DC." },
 
 ];
 
@@ -106,6 +106,18 @@ export const categories = [
 
 export function getProductsByCategory(category: string): Product[] {
   return products.filter((p) => p.category === category);
+}
+
+export function getProductsForPage(slug: string): Product[] {
+  if (slug === "access-points") {
+    return products.filter((p) => p.category === "access-points" || p.category === "routeurs");
+  }
+  if (slug === "mesh") {
+    return products.filter(
+      (p) => p.category === "mesh" || (p.category === "access-points" && p.brand === "Ruijie")
+    );
+  }
+  return products.filter((p) => p.category === slug);
 }
 
 export function getProductBySlug(slug: string): Product | undefined {

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { products, categories } from "@/lib/products";
+import { products, categories, getProductsForPage } from "@/lib/products";
 import CategoryClient from "@/components/products/CategoryClient";
 
 const BASE_URL = "https://qonixs.com";
@@ -32,7 +32,7 @@ const categoryMeta: Record<string, { name: string; description: string; keywords
     description: "Routeurs 4G LTE TP-Link au Maroc — internet mobile haut débit avec slot SIM. Parfait pour les zones sans fibre ou ADSL. MR6400, MR600 disponibles.",
     keywords: ["routeur 4G Maroc", "internet 4G Maroc", "routeur SIM Maroc", "internet mobile Maroc", "4G LTE Maroc", "routeur 4G LTE prix Maroc"],
   },
-  "points-acces": {
+  "access-points": {
     name: "Points d'accès WiFi",
     description: "Points d'accès WiFi professionnels Ruijie Reyee et TP-Link Omada au Maroc — pour hôtels, résidences, entreprises. Coverage intérieure et extérieure IP68.",
     keywords: ["point d'accès WiFi Maroc", "access point Maroc", "Ruijie Reyee Maroc", "TP-Link Omada Maroc", "WiFi hôtel Maroc", "WiFi professionnel Maroc"],
@@ -71,7 +71,7 @@ export async function generateMetadata({
 // ─── Page (Server Component) ─────────────────────────────────────────────────
 export default function CategoryPage({ params }: { params: { slug: string } }) {
   const meta = categoryMeta[params.slug];
-  const categoryProducts = products.filter((p) => p.category === params.slug);
+  const categoryProducts = getProductsForPage(params.slug);
 
   if (!meta && categoryProducts.length === 0) notFound();
 

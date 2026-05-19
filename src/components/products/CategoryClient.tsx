@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { products, categories, formatPrice } from "@/lib/products";
+import { products, categories, formatPrice, getProductsForPage } from "@/lib/products";
 import ProductCard from "@/components/products/ProductCard";
 
 const sortOptions = [
@@ -24,7 +24,7 @@ export default function CategoryClient({ slug, categoryName }: CategoryClientPro
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
 
   const categoryProducts = useMemo(() => {
-    let filtered = products.filter((p) => p.category === slug);
+    let filtered = getProductsForPage(slug);
 
     // Price filter
     filtered = filtered.filter((p) => p.price >= priceRange[0] && p.price <= priceRange[1]);
@@ -55,7 +55,7 @@ export default function CategoryClient({ slug, categoryName }: CategoryClientPro
     return filtered;
   }, [slug, sort, priceRange, selectedBrands]);
 
-  const availableBrands = Array.from(new Set(products.filter((p) => p.category === slug).map((p) => p.brand)));
+  const availableBrands = Array.from(new Set(getProductsForPage(slug).map((p) => p.brand)));
 
   const toggleBrand = (brand: string) => {
     setSelectedBrands((prev) =>
