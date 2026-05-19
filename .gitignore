@@ -38,3 +38,6 @@ Thumbs.db
 
 # Fichier de démarrage local uniquement
 start.js
+
+# Let Netlify generate fresh lockfile
+package-lock.json
