@@ -18,7 +18,7 @@ function getCategoryName(category: string): string {
     switches: "Switches Réseau",
     cameras: "Caméras IP",
     "4g-lte": "Routeurs 4G/LTE",
-    "points-acces": "Points d'accès WiFi",
+    "access-points": "Points d'accès WiFi",
   };
   return map[category] || category;
 }

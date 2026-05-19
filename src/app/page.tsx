@@ -71,7 +71,7 @@ const brands = ["TP-Link", "Tapo", "Deco", "Omada", "Ruijie", "Archer"];
 // Carousels
 const routeurs = products.filter((p) => p.category === "routeurs").slice(0, 10);
 const cameras = products.filter((p) => p.category === "cameras").slice(0, 10);
-const accessPoints = products.filter((p) => p.category === "points-acces").slice(0, 10);
+const accessPoints = products.filter((p) => p.category === "access-points").slice(0, 10);
 const switches = products.filter((p) => p.category === "switches").slice(0, 10);
 
 export default function HomePage() {
@@ -160,7 +160,7 @@ export default function HomePage() {
             title="Points d'accès WiFi"
             subtitle="Ruijie & TP-Link — couverture professionnelle"
             products={accessPoints}
-            viewAllHref="/categorie/points-acces"
+            viewAllHref="/categorie/access-points"
           />
         </div>
       </section>

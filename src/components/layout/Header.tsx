@@ -9,7 +9,7 @@ import { useCartStore } from "@/store/cartStore";
 const navLinks = [
   { href: "/", label: "Accueil" },
   { href: "/categorie/routeurs", label: "Routeurs" },
-  { href: "/categorie/points-acces", label: "Points d'accès" },
+  { href: "/categorie/access-points", label: "Points d'accès" },
   { href: "/categorie/mesh", label: "WiFi Mesh" },
   { href: "/categorie/switches", label: "Switches" },
   { href: "/categorie/cameras", label: "Caméras IP" },
