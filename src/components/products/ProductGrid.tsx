@@ -17,6 +17,7 @@ const tabs = [
   { key: "mesh", label: "WiFi Mesh" },
   { key: "switches", label: "Switches" },
   { key: "cameras", label: "Caméras" },
+  { key: "4g-lte", label: "4G LTE" },
   { key: "promo", label: "Promotions" },
 ];
 
@@ -69,8 +70,4 @@ export default function ProductGrid({ products, showTabs = false }: ProductGridP
       {filtered.length === 0 && (
         <p className="text-center text-gray-400 py-12 font-dm">
           Aucun produit trouvé dans cette catégorie.
-        </p>
-      )}
-    </div>
-  );
-}
+  

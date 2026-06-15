@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/categorie/mesh", label: "WiFi Mesh" },
   { href: "/categorie/switches", label: "Switches" },
   { href: "/categorie/cameras", label: "Caméras IP" },
+  { href: "/categorie/4g-lte", label: "4G/LTE" },
   { href: "/services", label: "Services" },
   { href: "/tarifs-satellite", label: "Satellite" },
   { href: "/blog", label: "Blog" },
@@ -218,8 +219,4 @@ export default function Header() {
               </nav>
             </motion.div>
           )}
-        </AnimatePresence>
-      </header>
-    </>
-  );
-}
+        

@@ -59,6 +59,7 @@ export const products: Product[] = [
   // ROUTEURS 4G/5G
   { id: 6, slug: "tl-mr6400", name: "TL-MR6400", category: "4g-lte", subcategory: null, brand: "TP-Link", price: 799, oldPrice: 899, badge: "Top vente", rating: 4.3, reviews: 156, inStock: false, image: "4g", imageUrl: "", specs: { wifi: "WiFi 4", speed: "N300", sim: "4G LTE", antennas: 2, ports: 4 }, description: "Routeur 4G LTE 300Mbps avec slot SIM intégré. Parfait pour les zones sans fibre." },
   { id: 7, slug: "mr600", name: "Archer MR600", category: "4g-lte", subcategory: null, brand: "TP-Link", price: 1099, oldPrice: 1299, badge: "-15%", rating: 4.4, reviews: 78, inStock: false, image: "4g", imageUrl: "", specs: { wifi: "WiFi 5", speed: "AC1200", sim: "4G+ Cat6", antennas: 4, ports: 4 }, description: "Routeur 4G+ Cat6 double SIM avec WiFi AC1200 pour des connexions ultra-rapides." },
+  { id: 32, slug: "cudy-lt18", name: "Cudy LT18", category: "4g-lte", subcategory: "wifi6", brand: "Cudy", price: 2040, oldPrice: null, badge: "Cat.18", rating: 4.8, reviews: 24, inStock: true, image: "4g", imageUrl: "https://www.cudy.com/cdn/shop/files/LT18.png?v=1710493746", specs: { wifi: "WiFi 6", speed: "AX1800", sim: "4G Cat.18", antennas: 6, ports: 4 }, description: "Routeur WiFi 6 4G LTE Advanced Cat.18 AX1800 avec double slot Nano SIM et 4 connecteurs d'antennes cellulaires. Jusqu'à 1,2 Gbps en téléchargement grâce à la technologie 5CA 4×4 MIMO. Idéal pour bureaux, zones sans fibre et réseau de secours WAN." },
 
   // MESH WIFI
   { id: 8, slug: "deco-xe75", name: "Deco XE75 (Pack 2)", category: "mesh", subcategory: null, brand: "TP-Link", price: 2499, oldPrice: 2899, badge: "WiFi 6E", rating: 4.8, reviews: 121, inStock: false, image: "mesh", imageUrl: "/assets/images/products/deco-xe75.jpg", specs: { wifi: "WiFi 6E", speed: "AX5400", coverage: "550m²", units: 2, backhaul: "Tri-Band" }, description: "Système Mesh WiFi 6E Tri-Band pour une couverture parfaite de 550m². Avec HomeShield intégré." },
@@ -101,7 +102,7 @@ export const categories = [
   { slug: "mesh", name: "WiFi Mesh", icon: "mesh", count: 3 },
   { slug: "switches", name: "Switches", icon: "switch", count: 6 },
   { slug: "cameras", name: "Caméras IP", icon: "camera", count: 4 },
-  { slug: "4g-lte", name: "3G/4G LTE", icon: "4g", count: 2 },
+  { slug: "4g-lte", name: "3G/4G LTE", icon: "4g", count: 3 },
 ];
 
 export function getProductsByCategory(category: string): Product[] {
