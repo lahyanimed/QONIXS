@@ -70,4 +70,8 @@ export default function ProductGrid({ products, showTabs = false }: ProductGridP
       {filtered.length === 0 && (
         <p className="text-center text-gray-400 py-12 font-dm">
           Aucun produit trouvé dans cette catégorie.
-  
+        </p>
+      )}
+    </div>
+  );
+}
