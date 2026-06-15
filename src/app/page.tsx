@@ -68,11 +68,15 @@ const trustItems = [
 
 const brands = ["TP-Link", "Tapo", "Deco", "Omada", "Ruijie", "Archer"];
 
+// Produits disponibles en stock
+const inStockProducts = products.filter((p) => p.inStock);
+
 // Carousels
 const routeurs = products.filter((p) => p.category === "routeurs").slice(0, 10);
 const cameras = products.filter((p) => p.category === "cameras").slice(0, 10);
 const accessPoints = products.filter((p) => p.category === "access-points").slice(0, 10);
 const switches = products.filter((p) => p.category === "switches").slice(0, 10);
+const lteProducts = products.filter((p) => p.category === "4g-lte").slice(0, 10);
 
 export default function HomePage() {
   return (
@@ -136,11 +140,29 @@ export default function HomePage() {
           <h2 className="font-syne font-bold text-2xl text-dark mb-6">Meilleures ventes</h2>
           <ProductGrid
             products={[
-              ...products.filter((p) => [1, 5, 19, 24, 25, 20, 8, 9, 13, 28, 15, 16].includes(p.id)),
+              ...products.filter((p) => [1, 5, 32, 19, 24, 25, 20, 8, 9, 13, 28, 15, 16].includes(p.id)),
             ]}
             showTabs
           />
         </div>
+      </section>
+
+      {/* ===== PRODUITS DISPONIBLES EN STOCK ===== */}
+      <section className="max-w-7xl mx-auto px-4 py-14">
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <div className="flex items-center gap-2 mb-1">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
+              </span>
+              <span className="text-xs font-dm font-semibold text-green-600 uppercase tracking-wider">Disponible immédiatement</span>
+            </div>
+            <h2 className="font-syne font-bold text-2xl text-dark">Produits en stock</h2>
+            <p className="text-sm text-gray-400 font-dm mt-0.5">Livraison express 24-48h — {inStockProducts.length} produits disponibles</p>
+          </div>
+        </div>
+        <ProductGrid products={inStockProducts} showTabs />
       </section>
 
       {/* Carousel — Routeurs */}
@@ -187,8 +209,96 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Carousel — 4G LTE */}
+      <section className="max-w-7xl mx-auto px-4 py-12">
+        <ProductCarousel
+          title="Routeurs 4G LTE"
+          subtitle="Cat.18 — WiFi 6 — Connexion stable partout au Maroc"
+          products={lteProducts}
+          viewAllHref="/categorie/4g-lte"
+        />
+      </section>
+
       {/* ===== SECTION MARQUES PARTENAIRES ===== */}
       <BrandSection />
+
+      {/* ===== BANNIÈRE PRODUIT — Cudy LT18 4G LTE ===== */}
+      <section className="max-w-7xl mx-auto px-4 pb-12">
+        <div
+          className="relative rounded-2xl overflow-hidden"
+          style={{ background: "linear-gradient(135deg, #0a1628 0%, #0f2744 50%, #0d1f35 100%)" }}
+        >
+          {/* Fond décoratif */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full" style={{ background: "radial-gradient(circle, rgba(16,185,129,0.12) 0%, transparent 70%)" }} />
+            <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full" style={{ background: "radial-gradient(circle, rgba(14,165,233,0.08) 0%, transparent 70%)" }} />
+            <div className="absolute top-1/2 right-1/4 w-1 h-24 bg-emerald-500/10 rotate-45" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center min-h-[260px]">
+            {/* Texte */}
+            <div className="p-8 lg:p-12 relative z-10">
+              {/* Badges */}
+              <div className="flex flex-wrap gap-2 mb-5">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-dm font-bold uppercase tracking-wider"
+                  style={{ background: "rgba(16,185,129,0.15)", border: "1px solid rgba(16,185,129,0.3)", color: "#34d399" }}>
+                  🆕 Nouveau
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-dm font-bold uppercase tracking-wider"
+                  style={{ background: "rgba(14,165,233,0.15)", border: "1px solid rgba(14,165,233,0.3)", color: "#38bdf8" }}>
+                  4G Cat.18
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-dm font-bold uppercase tracking-wider"
+                  style={{ background: "rgba(99,102,241,0.15)", border: "1px solid rgba(99,102,241,0.3)", color: "#a5b4fc" }}>
+                  WiFi 6 AX1800
+                </span>
+              </div>
+
+              {/* Titre */}
+              <h3 className="font-syne font-bold text-white mb-2" style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)", lineHeight: 1.2 }}>
+                Cudy LT18 — <span style={{ color: "#34d399" }}>4G partout</span><br />sans fibre ni ADSL
+              </h3>
+
+              {/* Sous-titre */}
+              <p className="font-dm text-gray-300 text-sm mb-1">Routeur WiFi 6 4G LTE Advanced Cat.18</p>
+              <p className="font-dm text-gray-400 text-xs mb-5 max-w-sm">
+                Double slot Nano SIM, 6 antennes externes, jusqu'à 1,2 Gbps en download. Idéal pour zones sans câble, hôtels, résidences et chantiers au Maroc.
+              </p>
+
+              {/* Prix + CTA */}
+              <div className="flex items-center gap-4">
+                <div>
+                  <span className="font-syne font-bold text-white text-2xl">2 040</span>
+                  <span className="font-dm text-gray-300 text-sm ml-1">DH TTC</span>
+                </div>
+                <a
+                  href="/produit/cudy-lt18"
+                  className="px-5 py-2.5 font-dm font-semibold text-sm rounded-xl transition-all"
+                  style={{ background: "#10b981", color: "#fff" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.background = "#059669")}
+                  onMouseLeave={(e) => (e.currentTarget.style.background = "#10b981")}
+                >
+                  Voir le Cudy LT18 →
+                </a>
+              </div>
+            </div>
+
+            {/* Image produit */}
+            <div className="flex items-center justify-center p-6 md:p-10 relative z-10">
+              {/* Halo lumineux derrière l'image */}
+              <div className="absolute w-56 h-56 rounded-full"
+                style={{ background: "radial-gradient(circle, rgba(16,185,129,0.18) 0%, transparent 70%)" }} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://www.cudy.com/cdn/shop/files/LT18.png?v=1710493746"
+                alt="Cudy LT18 Routeur 4G LTE Cat.18 WiFi 6 AX1800 — Qonixs Maroc"
+                className="max-h-52 object-contain relative z-10 drop-shadow-2xl"
+                style={{ filter: "drop-shadow(0 0 24px rgba(16,185,129,0.25))" }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Bannière produit — WiFi 7 Archer BE220 */}
       <section className="max-w-7xl mx-auto px-4 pb-12">
