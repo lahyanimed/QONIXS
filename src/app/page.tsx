@@ -273,10 +273,7 @@ export default function HomePage() {
                 </div>
                 <a
                   href="/produit/cudy-lt18"
-                  className="px-5 py-2.5 font-dm font-semibold text-sm rounded-xl transition-all"
-                  style={{ background: "#10b981", color: "#fff" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.background = "#059669")}
-                  onMouseLeave={(e) => (e.currentTarget.style.background = "#10b981")}
+                  className="px-5 py-2.5 font-dm font-semibold text-sm rounded-xl transition-all bg-emerald-500 hover:bg-emerald-600 text-white"
                 >
                   Voir le Cudy LT18 →
                 </a>
